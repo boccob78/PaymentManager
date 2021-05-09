@@ -54,7 +54,6 @@ mvn test
 * [Spring Boot](https://spring.io/projects/spring-boot) - The web framework used
 * [Primefaces](https://www.primefaces.org/) - The jsf framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [Docker](https://www.docker.com/) - Container service to run the application
 
 ## Documentation
 
