@@ -65,7 +65,7 @@ mvn test
 
 ## Documentation
 
-The javadoc for this project can be found [here](https://boccob78.github.io/Paymentmanager)
+The javadoc for this project can be found [here](https://boccob78.github.io/PaymentManager)
 
 ## Authors
 
