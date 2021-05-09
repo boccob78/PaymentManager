@@ -41,11 +41,11 @@ The user views a list of pre-generated accounts. All accounts start with a balan
 * He can view transactions for the transferring party
 ![View Transactions](/docs/transactions-nav.png?raw=true "Transactions")
 * Transactions
-![Transactions](/docs/transactions-nav.png?raw=true "Transactions")
+![Transactions](/docs/transactions.png?raw=true "Transactions")
 * He can view messages for both parties
 ![View Messages](/docs/messages-nav.png?raw=true "Transactions")
 * Messages
-![Messages](/docs/messages-nav.png?raw=true "Transactions")
+![Messages](/docs/messages.png?raw=true "Transactions")
 
 ## Running the tests
 
