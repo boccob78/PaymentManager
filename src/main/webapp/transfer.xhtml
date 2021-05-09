@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <ui:include src="header.xhtml" />
+</h:head>
+
+<h:body style="margin-left:50px">
+    <h2>Payment manager</h2>
+    <h:form id="transferForm">
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate/>
+        </p:messages>
+        <p:selectOneMenu id="from" value="#{transferView.from}" required="true">
+            <p:ajax update="@this" process="@this"/>
+            <f:selectItem itemLabel="Select an account" noSelectionOption="true"/>
+            <f:selectItems value="#{transferView.selectAccounts}"/>
+        </p:selectOneMenu>
+
+        <p:selectOneMenu id="to" value="#{transferView.to}" required="true">
+            <p:ajax update="@this" process="@this"/>
+            <f:selectItem itemLabel="Select an account" noSelectionOption="true"/>
+            <f:selectItems value="#{transferView.selectAccounts}"/>
+        </p:selectOneMenu>
+
+        <p:inputNumber value="#{transferView.transferAmount}" decimalPlaces="2"/>
+
+        <p:commandButton action="#{transferView.transfer}" value="Transfer"/>
+    </h:form>
+</h:body>
+</html>

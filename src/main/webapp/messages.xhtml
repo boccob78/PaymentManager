@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+    <ui:include src="header.xhtml" />
+</h:head>
+
+<h:body style="margin-left:50px">
+    <h2>Payment manager</h2>
+
+    <h2>Messages</h2>
+    <c:set var="emailAddress" value="#{param['emailAddress']}"/>
+    <p:dataTable var="message" value="#{messagesView.getMessagesBy(emailAddress)}">
+        <p:column headerText="from">
+            <h:outputText value="#{message.from}" />
+        </p:column>
+        <p:column headerText="subject">
+            <h:outputText value="#{message.subject}" />
+        </p:column>
+        <p:column headerText="content">
+            <h:outputText value="#{message.content}" />
+        </p:column>
+
+    </p:dataTable>
+</h:body>
+</html>

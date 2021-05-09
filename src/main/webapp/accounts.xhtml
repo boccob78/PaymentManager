@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <ui:include src="header.xhtml" />
+</h:head>
+
+<h:body style="margin-left:50px">
+    <h2>Payment manager</h2>
+
+    <h2>Accounts</h2>
+    <p:dataTable var="account" value="#{accountsView.allAccounts}">
+        <p:column headerText="name">
+            <p:link outcome="transactions" value="#{account.name}">
+                <f:param name="accountId" value="#{account.id}"/>
+            </p:link>
+        </p:column>
+        <p:column headerText="balance">
+            <h:outputText value="#{account.balance}">
+                <f:convertNumber type="currency" currencySymbol="€" minFractionDigits = "2" />
+            </h:outputText>
+        </p:column>
+        <p:column headerText="email">
+            <p:link outcome="messages" value="#{account.emailAddress}">
+                <f:param name="emailAddress" value="#{account.emailAddress}"/>
+            </p:link>
+        </p:column>
+
+    </p:dataTable>
+</h:body>
+</html>
