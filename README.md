@@ -17,13 +17,6 @@ mvn install
 
 ### Running
 
-To run the application in a docker container, navigate to the root folder of the project
-
-```
-docker-compose up
-
-```
-
 To run the application with maven use
 
 ```
