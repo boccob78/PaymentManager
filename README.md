@@ -4,27 +4,8 @@ Simulate a basic payment web application in Java
 
 ## Getting Started
 
-The task objective is the following:
-
-* Tasks can be postponed with a "remind me at" date for later.
-* A scheduler should create new tasks at a random interval
-* Tasks should be persisted in the database and should have, at least, the
-following fields
-  * id (uuid)
-  * createdAt
-  * updatedAt
-  * dueDate
-  * resolvedAt
-  * title
-  * description
-  * priority
-  * status
-* REST Endpoints for communication with the Frontend
-* For communication with the frontend, DTOs should be used
-* Load the tasks from the backend asynchronously and list them according to
-their dueDate and the priority
-* If new tasks come in, they should be automatically added to the list of tasks
-without the need to manually refresh the page
+The task is to simulate a transfer of payments between accounts.
+The rules for the task are discussed in the assignment and will not be displayed here
 
 ### Building
 
